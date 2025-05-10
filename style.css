@@ -1,0 +1,253 @@
+/* Basic Resets and Typography */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    color: #333; /* Default text color */
+    background-color: #f8f8f8; /* Light background */
+}
+
+h1, h2, h3 {
+    margin-top: 0;
+    margin-bottom: 0.5em;
+    line-height: 1.2;
+    color: #222; /* Slightly darker color for headings */
+}
+
+h1 {
+    font-size: 2.5em;
+}
+
+h2 {
+    font-size: 2em;
+    margin-bottom: 1em;
+    text-align: center;
+}
+
+h3 {
+    font-size: 1.5em;
+}
+
+p {
+    margin-bottom: 1em;
+}
+
+/* Layout */
+.container {
+    max-width: 1000px; /* Limit content width */
+    margin: 0 auto; /* Center the container */
+    padding: 0 20px; /* Add padding on the sides */
+}
+
+section {
+    padding: 60px 0; /* Add space above and below sections */
+}
+
+/* --- Section Specific Styles --- */
+
+/* Hero Section */
+.hero-section {
+    background-color: #e9e9e9; /* Light background for hero */
+    text-align: center;
+    padding: 100px 0; /* More padding for the main section */
+}
+
+.hero-section h1 {
+    font-size: 3em;
+    margin-bottom: 0.5em;
+    color: #111;
+}
+
+.hero-section p {
+    font-size: 1.2em;
+    margin-bottom: 1.5em;
+}
+
+/* How It Works Section */
+.how-it-works-section {
+    background-color: #fff; /* White background */
+}
+
+.how-it-works-section ol {
+    list-style: none; /* Remove default list numbers */
+    padding: 0;
+    counter-reset: step-counter; /* Initialize counter */
+}
+
+.how-it-works-section li {
+    counter-increment: step-counter; /* Increment counter */
+    margin-bottom: 30px;
+    padding-left: 60px; /* Space for custom counter */
+    position: relative; /* Needed for absolute positioning of counter */
+}
+
+.how-it-works-section li::before {
+    content: counter(step-counter); /* Display the counter value */
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: #007bff; /* Blue background for counter */
+    color: white;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.how-it-works-section li h3 {
+    margin-bottom: 0.5em;
+}
+
+.how-it-works-section li ul {
+    list-style: disc;
+    margin-top: 0.5em;
+    padding-left: 20px;
+}
+
+/* Post-Sale System */
+.post-sale-system-section {
+    background-color: #f0f0f0; /* Light gray background */
+}
+
+.post-sale-system-section ul {
+    list-style: none;
+    padding: 0;
+    text-align: center; /* Center list items */
+}
+
+.post-sale-system-section li {
+    margin-bottom: 15px;
+    font-size: 1.1em;
+}
+
+/* Lead Magnet CTA Section & Repeat CTA Section */
+.lead-magnet-cta-section,
+.repeat-cta-section {
+    background-color: #d4edda; /* Light green background */
+    text-align: center;
+}
+
+.lead-magnet-cta-section h2,
+.repeat-cta-section h2 {
+     color: #155724; /* Dark green heading color */
+}
+
+.lead-magnet-cta-section p,
+.repeat-cta-section p {
+    font-size: 1.2em;
+    margin-bottom: 1.5em;
+}
+
+
+/* --- Button Styles --- */
+.btn {
+    display: inline-block; /* Allow padding and margin */
+    padding: 12px 25px;
+    margin: 10px;
+    text-decoration: none; /* Remove underline */
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, opacity 0.3s ease;
+}
+
+.primary-btn {
+    background-color: #007bff; /* Blue */
+    color: white;
+    border: 1px solid #007bff;
+}
+
+.primary-btn:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    border-color: #0056b3;
+    opacity: 0.9;
+}
+
+.secondary-btn {
+    background-color: transparent; /* Transparent background */
+    color: #007bff; /* Blue text */
+    border: 1px solid #007bff;
+}
+
+.secondary-btn:hover {
+    background-color: #e9e9e9; /* Light background on hover */
+    color: #0056b3; /* Darker blue text */
+    border-color: #0056b3;
+    opacity: 0.9;
+}
+
+/* Footer */
+footer {
+    background-color: #333; /* Dark background */
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 0.9em;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* --- Basic Responsiveness --- */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2em;
+    }
+
+    h2 {
+        font-size: 1.8em;
+    }
+
+    .hero-section {
+        padding: 80px 0;
+    }
+
+    section {
+        padding: 40px 0;
+    }
+
+    .container {
+        padding: 0 15px; /* Slightly less padding on smaller screens */
+    }
+
+    .btn {
+        display: block; /* Stack buttons on small screens */
+        margin: 10px auto; /* Center stacked buttons */
+        width: 80%; /* Make buttons wider */
+    }
+}
+
+@media (max-width: 480px) {
+     h1 {
+        font-size: 1.8em;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+
+    .how-it-works-section li {
+        padding-left: 50px;
+    }
+
+    .how-it-works-section li::before {
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        font-size: 1em;
+    }
+}

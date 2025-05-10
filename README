@@ -1,7 +1,26 @@
-echo "# AIRevenue" >> README.md
-git init
-git add README.md
-git commit -m "first commit"
-git branch -M main
-git remote add origin https://github.com/merbixo/AIRevenue.git
-git push -u origin main
+# Revenue.AI – AI Funnels That Sell For You
+
+A smart, AI-driven landing page designed to help dental clinics automate lead capture, outreach, and appointment booking.
+
+## Overview
+
+This project includes:
+- A high-converting landing page (HTML/CSS)
+- Call-to-action sections for Smart Reports, Infomercials, and Demo Bookings
+- Mobile-responsive design
+- Easy deployment via GitHub Pages
+
+## Features
+
+- **Hero Section** with value-driven headline
+- **Smart Report CTA** – Form for lead capture
+- **Infomercial Demo Video** – Embedded or linked
+- **Appointment Booking Integration** – (Calendly or similar)
+- **Testimonials & Social Proof**
+- **Google Review Funnel**
+
+## Getting Started
+
+1. Clone or fork this repo:
+```bash
+git clone https://github.com/yourusername/dentalrevenue-ai.git
